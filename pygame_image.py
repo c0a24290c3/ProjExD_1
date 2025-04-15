@@ -10,6 +10,7 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
+    bg_img2 = pg.transform.flip(bg_img, True, False)#練習8
     kk_img = pg.image.load("fig/3.png") #練習2
     kk_img = pg.transform.flip(kk_img, True, False)
     kk_img = pg.transform.rotozoom(kk_img, 10, 1.0)
@@ -20,8 +21,8 @@ def main():
 
         X = tmr #練習6
         screen.blit(bg_img, [-X, 0])
+        screen.blit(bg_img2, [-X+1600,0])#練習7,8
         screen.blit(kk_img, [300, 200]) #練習4
-        screen.blit(bg_img, [-X+1600,0])#練習7
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習5
