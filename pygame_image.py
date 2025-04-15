@@ -21,6 +21,7 @@ def main():
         X = tmr #練習6
         screen.blit(bg_img, [-X, 0])
         screen.blit(kk_img, [300, 200]) #練習4
+        screen.blit(bg_img, [-X+1600,0])#練習7
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習5
